@@ -1,0 +1,5 @@
+contents="bashcms2_contents"
+contents_owner="todayokgo"
+wwwdir="/var/www"
+dontentsdir="$wwwdir/$contents"
+appdir="$wwwdir/bashcms2"
