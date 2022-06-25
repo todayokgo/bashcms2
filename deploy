@@ -1,8 +1,11 @@
 #!/bin/bash -eux
-
 source "$(dirname $0)/bin/conf"
 
 [ "$USER" = "root" ]
+
+### CREATE DIRECTORIES ###
+mkdir -p "$logdir" "$datadir"
+chown www-data:www-data "$logdir" "$datadir"
 
 ### INSTALL THIS SYSTEM ###
 rsync -av --delete "$(dirname $0)/bin/" "$appdir/"
